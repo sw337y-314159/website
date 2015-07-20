@@ -1,8 +1,6 @@
 {
 	"provisionerId": "aws-provisioner",
 	"workerType": "b2g-test",
-	"created": "2015-07-20T23:42:12.946Z",
-	"deadline": "2015-07-21T00:42:12.946Z",
 	"payload": {
 		"image": "quay.io/mrrrgn/desktop-build:0.0.21",
 		"command": [
