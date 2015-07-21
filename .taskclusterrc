@@ -1,26 +1,21 @@
-{
-	"provisionerId": "aws-provisioner",
-	"workerType": "b2g-test",
-	"payload": {
-		"image": "quay.io/mrrrgn/desktop-build:0.0.21",
-		"command": [
-			"/bin/bash",
-			"-c",
-			"/home/worker/bin/build.sh"
-		],
-		"env": {
-			"TOOLTOOL_CACHE": "/home/worker/tooltool-cache",
-			"MH_BUILD_POOL": "taskcluster",
-			"MOZHARNESS_SCRIPT": "mozharness/scripts/fx_desktop_build.py",
-			"MOZHARNESS_CONFIG": "builds/releng_base_linux_64_builds.py",
-			"NEED_XVFB": "true"
-		},
-		"maxRunTime": 10800
-	},
-	"metadata": {
-		"name": "FF Builder Testing",
-		"description": "IamamwhoamI",
-		"owner": "mphillips@mozilla.com",
-		"source": "http://tools.taskcluster.net/task-creator/"
-	}
-}
+---
+  provisionerId: "aws-provisioner"
+  workerType: "b2g-test"
+  payload: 
+    image: "quay.io/mrrrgn/desktop-build:0.0.21"
+    command: 
+      - "/bin/bash"
+      - "-c"
+      - "/home/worker/bin/build.sh"
+    env: 
+      TOOLTOOL_CACHE: "/home/worker/tooltool-cache"
+      MH_BUILD_POOL: "taskcluster"
+      MOZHARNESS_SCRIPT: "mozharness/scripts/fx_desktop_build.py"
+      MOZHARNESS_CONFIG: "builds/releng_base_linux_64_builds.py"
+      NEED_XVFB: "true"
+    maxRunTime: 10800
+  metadata: 
+    name: "FF Builder Testing"
+    description: "IamamwhoamI"
+    owner: "mphillips@mozilla.com"
+    source: "http://tools.taskcluster.net/task-creator/"
