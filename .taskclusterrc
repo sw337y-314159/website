@@ -2,20 +2,14 @@
   provisionerId: "aws-provisioner"
   workerType: "b2g-test"
   payload: 
-    image: "quay.io/mrrrgn/desktop-build:0.0.21"
+    image: "ubuntu:latest"
     command: 
       - "/bin/bash"
       - "-c"
-      - "/home/worker/bin/build.sh"
-    env: 
-      TOOLTOOL_CACHE: "/home/worker/tooltool-cache"
-      MH_BUILD_POOL: "taskcluster"
-      MOZHARNESS_SCRIPT: "mozharness/scripts/fx_desktop_build.py"
-      MOZHARNESS_CONFIG: "builds/releng_base_linux_64_builds.py"
-      NEED_XVFB: "true"
+      - "echo 'I was created by https://github.com/mrrrgn/taskcluster-github: from the config at https://raw.githubusercontent.com/ninethings/website/master/.taskclusterrc"
     maxRunTime: 10800
   metadata: 
-    name: "FF Builder Testing"
-    description: "IamamwhoamI"
+    name: "Taskcluster Github"
+    description: "You can't fit 'me' into a text file."
     owner: "mphillips@mozilla.com"
     source: "http://tools.taskcluster.net/task-creator/"
