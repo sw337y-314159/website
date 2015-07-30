@@ -1,6 +1,6 @@
 ---
   provisionerId: "aws-provisioner"
-  workerType: "b2g-test"
+  workerType: "b2gtest"
   payload: 
     image: "ubuntu:latest"
     command: 
