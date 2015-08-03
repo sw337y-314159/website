@@ -1,7 +1,15 @@
 ---
-  payload: 
-    image: "ubuntu:latest"
-    command: 
-      - "/bin/bash"
-      - "-c"
-      - "echo 'just this easy'"
+tasks:
+  - payload: 
+     image: "ubuntu:latest"
+     command: 
+       - "/bin/bash"
+       - "-c"
+       - "echo 'just this easy'"
+  - extra:
+    github_events:
+      - push
+    payload:
+      image: "ubuntu:latest"
+      command:
+        - "echo 'I only run on pushes'"
