@@ -7,8 +7,8 @@ tasks:
        - "-c"
        - "echo 'just this easy'"
   - extra:
-    github_events:
-      - push
+      github_events:
+        - push
     payload:
       image: "ubuntu:latest"
       command:
