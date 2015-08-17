@@ -10,7 +10,7 @@ tasks:
   - extra:
       github_events:
         - push
-    payload:
+  - payload:
       image: "ubuntu:latest"
       command:
         - "/bin/bash"
