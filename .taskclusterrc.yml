@@ -2,9 +2,10 @@
 version: 0
 tasks:
   - extra:
-      github_events:
-        - push
-        - pull_request.*
+      github:
+        events:
+          - push
+          - pull_request.*
     payload:
       image: "ubuntu:latest"
       env: "{{ $githubEnvs }}"
