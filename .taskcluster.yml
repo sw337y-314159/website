@@ -12,4 +12,4 @@ tasks:
       command:
         - "/bin/bash"
         - "-c"
-        - "echo 'I only run on pushes'"
+        - "echo 'I run on all the things'"
