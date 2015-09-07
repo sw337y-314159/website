@@ -13,3 +13,8 @@ tasks:
         - "/bin/bash"
         - "-c"
         - "echo 'I run on all the things'"
+    metadata:
+		  name: "test",
+		  description: "IamamwhoamI",
+		  owner: "mphillips@mozilla.com",
+		  source: "{{ organization }}"
