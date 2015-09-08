@@ -9,7 +9,7 @@ tasks:
     workerType: b2g-desktop-opt
     extra:
       github:
-        envs: true
+        env: true
         events:
           - push
           - pull_request.*
