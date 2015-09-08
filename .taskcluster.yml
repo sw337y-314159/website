@@ -3,7 +3,7 @@ metadata:
   name: "test"
   description: "IamamwhoamI"
   owner: "mphillips@mozilla.com"
-  source: "{{ headRepoUrl }}"
+  source: "{{ event.head.repo.url }}"
 tasks:
   - provisionerId: aws-provisioner-v1
     workerType: b2g-desktop-opt
@@ -23,4 +23,4 @@ tasks:
       name: "test"
       description: "IamamwhoamI"
       owner: "mphillips@mozilla.com"
-      source: "{{ headRepoUrl }}"
+      source: "{{ event.head.repo.url }}"
