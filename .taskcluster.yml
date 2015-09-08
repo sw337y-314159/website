@@ -18,4 +18,4 @@ tasks:
       name: "test"
       description: "IamamwhoamI"
       owner: "mphillips@mozilla.com"
-      source: "{{ organization }}"
+      source: "{{ headRepoUrl }}"
