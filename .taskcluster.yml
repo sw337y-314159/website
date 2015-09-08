@@ -1,7 +1,7 @@
 version: 0
 tasks:
- - provisionerId: aws-provisioner-v1
-	 workerType: b2g-desktop-opt
+  - provisionerId: aws-provisioner-v1
+    workerType: b2g-desktop-opt
     extra:
       github:
         envs: true
