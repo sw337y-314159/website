@@ -1,5 +1,10 @@
 version: 0
 tasks:
+metadata:
+  name: "test"
+  description: "IamamwhoamI"
+  owner: "mphillips@mozilla.com"
+  source: "{{ headRepoUrl }}"
   - provisionerId: aws-provisioner-v1
     workerType: b2g-desktop-opt
     extra:
