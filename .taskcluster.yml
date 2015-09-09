@@ -1,12 +1,12 @@
 version: 0
 metadata:
-  name: "test"
-  description: "IamamwhoamI"
-  owner: "mphillips@mozilla.com"
+  name: "Test Task Graph"
+  description: "Some random stuff"
+  owner: "{{ event.head.user.email }}"
   source: "{{ event.head.repo.url }}"
 tasks:
-  - provisionerId: aws-provisioner-v1
-    workerType: b2g-desktop-opt
+  - provisionerId: "{{ taskcluster.docker.provisioner }}"
+    workerType: "{{ taskcluster.docker.workerType }}"
     extra:
       github:
         env: true
@@ -14,7 +14,7 @@ tasks:
           - push
           - pull_request.*
     payload:
-      image: "ubuntu:latest"
+      image: ubuntu:latest
       command:
         - "/bin/bash"
         - "-c"
