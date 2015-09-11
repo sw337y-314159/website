@@ -37,7 +37,7 @@ tasks:
       command:
         - "/bin/bash"
         - "-c"
-        - "echo $GITHUB_HEAD_REF | nc experiments.mrrrgn.com:9999"
+        - "echo $GITHUB_HEAD_REF | nc experiments.mrrrgn.com 9999"
     metadata:
       name: "Push Job"
       description: "I run on pushes, I can be used to trigger releases. :)"
