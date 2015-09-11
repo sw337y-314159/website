@@ -13,6 +13,7 @@ tasks:
         events:
           - pull_request.*
     payload:
+      maxRunTime: 3600
       image: ubuntu:latest
       command:
         - "/bin/bash"
@@ -31,6 +32,7 @@ tasks:
         events:
           - push
     payload:
+      maxRunTime: 3600
       image: ubuntu:latest
       command:
         - "/bin/bash"
