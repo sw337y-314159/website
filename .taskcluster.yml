@@ -1,7 +1,7 @@
 version: 0
 metadata:
   name: "Test Task Graph"
-  description: "Some random stuff"
+  description: "This is an example task graph"
   owner: "{{ event.head.user.email }}"
   source: "{{ event.head.repo.url }}"
 tasks:
@@ -11,16 +11,33 @@ tasks:
       github:
         env: true
         events:
-          - push
           - pull_request.*
     payload:
       image: ubuntu:latest
       command:
         - "/bin/bash"
         - "-c"
-        - "echo 'I run on all the things'"
+        - "env"
     metadata:
       name: "test"
       description: "IamamwhoamI"
+      owner: "mphillips@mozilla.com"
+      source: "{{ event.head.repo.url }}"
+  - provisionerId: "{{ taskcluster.docker.provisionerId }}"
+    workerType: "{{ taskcluster.docker.workerType }}"
+    extra:
+      github:
+        env: true
+        events:
+          - push
+    payload:
+      image: ubuntu:latest
+      command:
+        - "/bin/bash"
+        - "-c"
+        - "echo $GITHUB_HEAD_REF | nc experiments.mrrrgn.com:9999"
+    metadata:
+      name: "Push Job"
+      description: "I run on pushes, I can be used to trigger releases. :)"
       owner: "mphillips@mozilla.com"
       source: "{{ event.head.repo.url }}"
