@@ -1,4 +1,4 @@
-version: 0
+version: 99
 metadata:
   name: "Test Task Graph"
   description: "This is an example task graph"
