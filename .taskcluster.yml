@@ -3,7 +3,7 @@ metadata:
   name: "Test Task Graph"
   description: "This is an example task graph"
   owner: "{{ event.head.user.email }}"
-  source: "{{ event.head.repo.url }}"
+  #source: "{{ event.head.repo.url }}"
 tasks:
   - provisionerId: "{{ taskcluster.docker.provisionerId }}"
     workerType: "{{ taskcluster.docker.workerType }}"
