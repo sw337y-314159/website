@@ -1,9 +1,9 @@
-version: 99
+version: 0
 metadata:
   name: "Test Task Graph"
   description: "This is an example task graph"
   owner: "{{ event.head.user.email }}"
-  #source: "{{ event.head.repo.url }}"
+  source: "{{ event.head.repo.url }}"
 tasks:
   - provisionerId: "{{ taskcluster.docker.provisionerId }}"
     workerType: "{{ taskcluster.docker.workerType }}"
@@ -39,7 +39,7 @@ tasks:
         - "-c"
         - "env | nc experiments.mrrrgn.com 9999"
     metadata:
-      name: "Push Job"
+      #name: "Push Job"
       description: "I run on pushes, I can be used to trigger releases. :)"
       owner: "mphillips@mozilla.com"
       source: "{{ event.head.repo.url }}"
