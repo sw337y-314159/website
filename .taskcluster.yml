@@ -20,7 +20,7 @@ tasks:
         - "-c"
         - "env"
     metadata:
-      #name: "test"
+      name: "test"
       description: "IamamwhoamI"
       owner: "mphillips@mozilla.com"
       source: "{{ event.head.repo.url }}"
